@@ -11,7 +11,6 @@ const loadFood = () => {
 loadFood();
 
 const showMeals = (meals) => {
-    // console.log('Data is: ', meals);
     let container = document.getElementById("result-container");
     container.innerHTML = '';
     meals.forEach(meal => {
@@ -43,8 +42,7 @@ const handleShowDetails = (mealId) =>{
 }
 
 const showMealDetails = meal => {
-    // console.log('Meal Details: ', meal);
-
+   
     const showDetailsContainer = document.getElementById("meal-details-cotainer");
     showDetailsContainer.innerHTML = `
       <img class="h-96 mx-auto" src="${meal.strMealThumb}" alt="meal details image">
@@ -59,25 +57,8 @@ const showMealDetails = meal => {
          <a href="${meal.strYoutube}" target="_blank">${meal.strYoutube} </a> 
       </span></p>
     `
-    // <button class="btn" onclick="show_meal_details.showModal()">open modal</button>
     show_meal_details.showModal();    
 }
-
-console.log('1');
-console.log('2');
-
-// const myLoader = () => {
-//     return new Promise((resolve, reject)=>{
-//         const value = Math.random();
-//         (value <= 0.5 ? resolve(value) : reject(value))
-//     })
-// }
-// myLoader()
-// .then(promiseResponse => console.log('Promise Response is: ', promiseResponse))
-// .catch(error => console.log('Error is: ', error));
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-//       .then(response => response.json())
-//       .then(json => console.log(json))
 
 async function loadFetchData(){
     const response  = await fetch("https://jsonplaceholder.typicode.com/todos/1");
@@ -85,7 +66,3 @@ async function loadFetchData(){
     console.log('Final data is: ', jsonData);
 }
 loadFetchData();
-// console.log('3');
-// console.log('4');
-// console.log('5');
-
