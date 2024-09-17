@@ -25,7 +25,7 @@ const showMeals = (meals) => {
                 <h2 class="card-title">${meal.strMeal}</h2>
                 <p title="${meal.strInstructions}" >${meal.strInstructions.slice(0,200)}...</p>
                 <div class="card-actions justify-end">
-                    <button onclick="handleShowDetails(${meal.idMeal})" class="btn btn-primary">Show Details</button>
+                    <button onclick="handleShowDetails(${meal.idMeal})" class="btn bg-sky-500 font-extrabold btn-primary">Show Details</button>
                 </div>
             </div>   
         `;
